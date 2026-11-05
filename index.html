@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Atividade de Japonês</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="container">
+    <h1>Atividade de Japonês</h1>
+
+    <!-- VOCABULÁRIO DE LUGARES -->
+    <section class="card">
+      <h2>Vocabulário de Lugares</h2>
+      <p>Escreva os vocabulários e kanjis no caderno. Estude os kanjis e observe atentamente a ordem de traços nas animações:</p>
+      
+      <div class="vocab-grid">
+        <div class="vocab-card">
+          <div class="gif-container">
+            <img src="東-order.gif" alt="東">
+            <img src="京-order.gif" alt="京">
+          </div>
+          <strong>東京</strong>
+          <span class="vocab-jp">とうきょう (Tóquio)</span>
+        </div>
+
+        <div class="vocab-card">
+          <div class="gif-container">
+            <img src="家-order.gif" alt="家">
+          </div>
+          <strong>家</strong>
+          <span class="vocab-jp">うち (Casa)</span>
+        </div>
+
+        <div class="vocab-card">
+          <div class="gif-container">
+            <img src="学-order.gif" alt="学">
+            <img src="校-order.gif" alt="校">
+          </div>
+          <strong>学校</strong>
+          <span class="vocab-jp">がっこう (Escola)</span>
+        </div>
+
+        <div class="vocab-card">
+          <div class="gif-container">
+            <img src="日-order.gif" alt="日">
+            <img src="本-order.gif" alt="本">
+          </div>
+          <strong>日本</strong>
+          <span class="vocab-jp">にほん (Japão)</span>
+        </div>
+      </div>
+
+      <!-- MINI-JOGO -->
+      <h3>Mini-Jogo: Descubra o Vocabulário</h3>
+      <p class="instrucao-jogo">Clique na alternativa correta para o kanji:</p>
+      
+      <div class="kanji-destaque-container">
+        <span id="pergunta-kanji" class="kanji-gigante">東京</span>
+      </div>
+
+      <div class="game-options">
+        <button id="btn-0" onclick="verificarJogo(0)">Tóquio</button>
+        <button id="btn-1" onclick="verificarJogo(1)">Escola</button>
+        <button id="btn-2" onclick="verificarJogo(2)">Casa</button>
+        <button id="btn-3" onclick="verificarJogo(3)">Japão</button>
+      </div>
+      <div style="text-align: center; margin-top: 15px;">
+        <button id="btn-proxima" onclick="proximaPergunta()" style="background-color: #27ae60; padding: 6px 14px; font-size: 0.9rem;">Próxima Pergunta ➡️</button>
+      </div>
+      <p id="feedback-jogo" class="feedback"></p>
+    </section>
+
+    <!-- AUTOAPRESENTAÇÕES -->
+    <section class="card">
+      <h2>Autoapresentações</h2>
+      <p>Leia cada apresentação e digite a tradução correspondente:</p>
+
+      <div class="profile-box">
+        <img src="image_b81287.png" alt="Perfil" class="profile-img">
+        <div class="japanese-text">
+          <p>はじめまして。アナです。</p>
+          <p>インドネシアから来ました。</p>
+          <p>二十歳です。(どうぞ) よろしくお願いします。</p>
+        </div>
+        <textarea id="trans-p1" rows="3" placeholder="Digite a tradução..."></textarea>
+      </div>
+
+      <div class="profile-box">
+        <div class="japanese-text">
+          <p>はじめまして。ケンです。</p>
+          <p>アメリカから来ました。</p>
+          <p>十八歳です。(どうぞ) よろしくお願いします。</p>
+        </div>
+        <textarea id="trans-p2" rows="3" placeholder="Digite a tradução..."></textarea>
+      </div>
+
+      <div class="profile-box">
+        <div class="japanese-text">
+          <p>はじめまして。マリアです。</p>
+          <p>ブラジルから来ました。</p>
+          <p>二十二歳です。(どうぞ) よろしくお願いします。</p>
+        </div>
+        <textarea id="trans-p3" rows="3" placeholder="Digite a tradução..."></textarea>
+      </div>
+
+      <div class="profile-box">
+        <div class="japanese-text">
+          <p>はじめまして。たなかです。</p>
+          <p>日本から来ました。</p>
+          <p>三十歳です。(どうぞ) よろしくお願いします。</p>
+        </div>
+        <textarea id="trans-p4" rows="3" placeholder="Digite a tradução..."></textarea>
+      </div>
+
+      <!-- CHINA COM FURIGANA (ちゅうごく) -->
+      <div class="profile-box">
+        <div class="japanese-text">
+          <p>はじめまして。メイです。</p>
+          <p>中国(ちゅうごく)から来ました。</p>
+          <p>十九歳です。(どうぞ) よろしくお願いします。</p>
+        </div>
+        <textarea id="trans-p5" rows="3" placeholder="Digite a tradução..."></textarea>
+      </div>
+
+      <button onclick="verificarTextos()">Verificar Traduções</button>
+      <p id="feedback-textos" class="feedback"></p>
+    </section>
+
+    <!-- VERBOS DE MOVIMENTO -->
+    <section class="card">
+      <h2>Verbos de Movimento</h2>
+      <p>Traduza as frases abaixo para o português:</p>
+
+      <div class="exercise-item">
+        <p class="jp-sentence">1. わたしは 東京に 行きます。</p>
+        <input type="text" id="q1" placeholder="Tradução da frase 1">
+      </div>
+
+      <div class="exercise-item">
+        <p class="jp-sentence">2. わたしは 家に 帰ります。</p>
+        <input type="text" id="q2" placeholder="Tradução da frase 2">
+      </div>
+
+      <div class="exercise-item">
+        <p class="jp-sentence">3. わたしは 学校に 行きます。</p>
+        <input type="text" id="q3" placeholder="Tradução da frase 3">
+      </div>
+
+      <div class="exercise-item">
+        <p class="jp-sentence">4. わたしは 日本に 帰ります。</p>
+        <input type="text" id="q4" placeholder="Tradução da frase 4">
+      </div>
+
+      <button onclick="verificarVerbos()">Verificar Verbos</button>
+      <p id="feedback-verbos" class="feedback"></p>
+    </section>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

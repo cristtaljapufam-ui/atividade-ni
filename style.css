@@ -1,0 +1,183 @@
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f0f2f5;
+  color: #333;
+  margin: 0;
+  padding: 20px;
+}
+
+.container {
+  max-width: 750px;
+  margin: 0 auto;
+}
+
+h1 {
+  text-align: center;
+  color: #2c3e50;
+}
+
+.card {
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 25px;
+}
+
+.vocab-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.vocab-card {
+  background: #fdfdfd;
+  padding: 15px;
+  border-radius: 8px;
+  text-align: center;
+  border: 2px solid #e2e8f0;
+}
+
+.vocab-card strong {
+  display: block;
+  font-size: 2.2rem;
+  color: #1a365d;
+  margin-top: 5px;
+  letter-spacing: 2px;
+}
+
+.vocab-jp {
+  display: block;
+  font-size: 1rem;
+  color: #4a5568;
+  font-weight: bold;
+  margin-top: 4px;
+}
+
+.gif-container {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  background: #f7fafc;
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #cbd5e0;
+}
+
+.gif-container img {
+  width: 75px;
+  height: 75px;
+  object-fit: contain;
+}
+
+.instrucao-jogo {
+  text-align: center;
+  font-size: 1.05rem;
+  margin-bottom: 5px;
+}
+
+.kanji-destaque-container {
+  text-align: center;
+  background: #f8fafc;
+  border: 2px dashed #cbd5e0;
+  border-radius: 10px;
+  padding: 15px;
+  margin: 10px 0 15px 0;
+}
+
+.kanji-gigante {
+  font-size: 3.5rem;
+  color: #1a365d;
+  font-weight: bold;
+  letter-spacing: 4px;
+}
+
+.game-options {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.game-options button {
+  margin-top: 0;
+  background-color: #dd6b20;
+}
+
+.game-options button:hover {
+  background-color: #c05621;
+}
+
+.profile-box {
+  border-bottom: 1px solid #eee;
+  padding-bottom: 15px;
+  margin-bottom: 15px;
+}
+
+/* FOTO INTEIRA, SEM CORTES (USANDO contain E SEM ALTURA FIXA LIMITANTE) */
+.profile-img {
+  width: 100%;
+  max-width: 320px;
+  height: auto;
+  object-fit: contain;
+  display: block;
+  margin: 0 auto 12px auto;
+  border: none;
+  box-shadow: none;
+}
+
+.japanese-text {
+  background-color: #f7fafc;
+  padding: 12px;
+  border-left: 4px solid #3182ce;
+  border-radius: 4px;
+  font-size: 1rem;
+  margin-bottom: 8px;
+}
+
+.japanese-text p {
+  margin: 3px 0;
+}
+
+.exercise-item {
+  margin-bottom: 15px;
+}
+
+.jp-sentence {
+  font-weight: bold;
+  font-size: 1.05rem;
+  margin-bottom: 5px;
+}
+
+textarea, input[type="text"] {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #cbd5e0;
+  border-radius: 6px;
+  box-sizing: border-box;
+  font-size: 0.95rem;
+}
+
+button {
+  margin-top: 10px;
+  background-color: #3182ce;
+  color: white;
+  border: none;
+  padding: 10px 18px;
+  font-size: 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+button:hover {
+  background-color: #2b6cb0;
+}
+
+.feedback {
+  margin-top: 10px;
+  font-weight: bold;
+  white-space: pre-line;
+  text-align: center;
+}
