@@ -9,6 +9,12 @@
 <body>
 
   <div class="container">
+    <!-- NOME DO ALUNO -->
+    <div class="card" style="margin-bottom: 20px; padding: 15px;">
+      <label for="nome-aluno" style="display: block; font-weight: bold; margin-bottom: 8px; color: #2c3e50;">Nome do Aluno:</label>
+      <input type="text" id="nome-aluno" placeholder="Digite seu nome completo..." style="width: 100%; padding: 10px; border: 1px solid #cbd5e0; border-radius: 6px; font-size: 1rem;">
+    </div>
+
     <h1>Atividade de Japonês</h1>
 
     <!-- VOCABULÁRIO DE LUGARES -->
@@ -124,18 +130,15 @@
         </div>
         <textarea id="trans-p5" rows="3" placeholder="Digite a tradução..."></textarea>
       </div>
-
-      <button onclick="verificarTextos()">Verificar Traduções</button>
-      <p id="feedback-textos" class="feedback"></p>
     </section>
 
-    <!-- VERBOS DE MOVIMENTO -->
+    <!-- VERBOS DE MOVIMENTO (Presente e Passado) -->
     <section class="card">
       <h2>Verbos de Movimento</h2>
-      <p>Traduza as frases abaixo para o português:</p>
+      <p>Traduza as frases abaixo para o português (aceita presente/futuro e passado):</p>
 
       <div class="exercise-item">
-        <p class="jp-sentence">1. わたしは 東京に 行きます。</p>
+        1. <p class="jp-sentence">わたしは 東京に 行きます。</p>
         <input type="text" id="q1" placeholder="Tradução da frase 1">
       </div>
 
@@ -145,18 +148,21 @@
       </div>
 
       <div class="exercise-item">
-        <p class="jp-sentence">3. わたしは 学校に 行きます。</p>
-        <input type="text" id="q3" placeholder="Tradução da frase 3">
+        <p class="jp-sentence">3. わたしは 学校に 行きました。</p>
+        <input type="text" id="q3" placeholder="Tradução da frase 3 (Passado)">
       </div>
 
       <div class="exercise-item">
-        <p class="jp-sentence">4. わたしは 日本に 帰ります。</p>
-        <input type="text" id="q4" placeholder="Tradução da frase 4">
+        <p class="jp-sentence">4. わたしは 日本に 帰りました。</p>
+        <input type="text" id="q4" placeholder="Tradução da frase 4 (Passado)">
       </div>
-
-      <button onclick="verificarVerbos()">Verificar Verbos</button>
-      <p id="feedback-verbos" class="feedback"></p>
     </section>
+
+    <!-- BOTÃO DE ENVIO ÚNICO -->
+    <div style="text-align: center; margin-bottom: 30px;">
+      <button onclick="enviarParaPlanilha()" style="background-color: #27ae60; font-size: 1.1rem; padding: 12px 24px;">Enviar Respostas</button>
+      <p id="feedback-envio" class="feedback" style="margin-top: 15px; font-size: 1.1rem;"></p>
+    </div>
 
   </div>
 

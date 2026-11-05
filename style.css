@@ -115,7 +115,6 @@ h1 {
   margin-bottom: 15px;
 }
 
-/* FOTO INTEIRA, SEM CORTES (USANDO contain E SEM ALTURA FIXA LIMITANTE) */
 .profile-img {
   width: 100%;
   max-width: 320px;
@@ -157,6 +156,13 @@ textarea, input[type="text"] {
   border-radius: 6px;
   box-sizing: border-box;
   font-size: 0.95rem;
+  transition: border-color 0.2s;
+}
+
+/* DESTAQUE VERMELHO PARA CAMPOS INCORRETOS */
+.erro-input {
+  border: 2px solid #e74c3c !important;
+  background-color: #fdf2f2;
 }
 
 button {
